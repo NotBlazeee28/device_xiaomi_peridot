@@ -10,6 +10,9 @@ persist.bluetooth.sbc_hd_higher_bitrate=1
 # Camera
 ro.camerax.extensions.enabled=true
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Display
 sys.brightness.disable_gamma_conversion=true
 
