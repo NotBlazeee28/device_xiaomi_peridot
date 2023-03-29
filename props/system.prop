@@ -13,6 +13,7 @@ ro.vendor.qti.sys.fw.bservice_limit=60
 persist.radio.is_vonr_enabled_0=true
 persist.radio.is_vonr_enabled_1=true
 persist.vendor.vonr_setting_support=1
+persist.rcs.supported=1
 
 # RIL Powersaving
 persist.radio.add_power_save=1 
