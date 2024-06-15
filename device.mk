@@ -201,6 +201,8 @@ PRODUCT_PACKAGES += \
     FastCharge
 
 # Fingerprint
+TARGET_HAS_UDFPS := true
+
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.common.thread.vendor \
     android.hardware.biometrics.common.util.vendor \
