@@ -88,6 +88,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "gettid: 1" "${2}" || echo -e "\ngettid: 1" >> "${2}"
             ;;
+        vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc)
+            [ "$2" = "" ] && return 0
+            sed -i "s/\/odm\/bin\//\/vendor\/bin\//g" "${2}"
+            ;;
         vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy)
             [ "$2" = "" ] && return 0
             grep -q "setsockopt: 1" "${2}" || echo "setsockopt: 1" >> "${2}"
