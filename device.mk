@@ -450,10 +450,12 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-    
+
+TARGET_PROVIDES_POWERHAL := true
+
 # QMI
 PRODUCT_PACKAGES += \
     libcurl.vendor \
