@@ -72,6 +72,10 @@ function blob_fixup() {
         vendor/bin/init.qcom.usb.sh)
             sed -i 's/ro.product.marketname/ro.product.odm.marketname/g' "${2}"
             ;;
+        vendor/lib64/libqcodec2_core.so)
+	    [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
+            ;;
         vendor/lib64/vendor.libdpmframework.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
