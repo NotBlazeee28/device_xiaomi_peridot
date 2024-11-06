@@ -4,6 +4,11 @@ ro.camerax.extensions.enabled=true
 # Display
 sys.brightness.disable_gamma_conversion=true
 
+# QTI Mem Optimisation
+persist.vendor.sys.memplus.enable=false
+ro.vendor.qti.sys.fw.bg_apps_limit=30
+ro.vendor.qti.sys.fw.bservice_limit=60
+
 # RIL Powersaving
 persist.radio.add_power_save=1 
 pm.sleep_mode=1 
