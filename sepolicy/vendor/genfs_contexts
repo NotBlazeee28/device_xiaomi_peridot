@@ -5,6 +5,9 @@ genfscon sysfs /kernel/smartpa/smartpa_type u:object_r:smartpa_type:s0
 genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/typec/port0/data_role u:object_r:vendor_sysfs_battery_supply:s0
 
+# Display
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param u:object_r:vendor_sysfs_displayfeature:s0
+
 # FastCharge
 genfscon sysfs /sys/class/qcom-battery/sport_mode                                                            u:object_r:sysfs_fastcharge:s0
 
