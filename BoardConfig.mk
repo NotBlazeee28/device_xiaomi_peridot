@@ -120,7 +120,7 @@ PRODUCT_COPY_FILES += \
 	$(PREBUILT_PATH)/images/kernel:kernel
 
 # Init
-TARGET_RECOVERY_DEVICE_MODULES := libinit_peridot
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_peridot)
 
 # Kernel modules
 DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_dlkm
