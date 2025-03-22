@@ -135,6 +135,7 @@ PRODUCT_PACKAGES += \
     libcamera_metadata.vendor \
     libexif.vendor \
     libutilscallstack.vendor \
+    libwrapper_dlengine_shim \
     libyuv.vendor
 
 PRODUCT_COPY_FILES += \
