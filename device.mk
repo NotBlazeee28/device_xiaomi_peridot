@@ -134,6 +134,7 @@ PRODUCT_PACKAGES += \
     liblz4.vendor \
     libcamera_metadata.vendor \
     libexif.vendor \
+    libprocessgroup_shim \
     libutilscallstack.vendor \
     libwrapper_dlengine_shim \
     libyuv.vendor
