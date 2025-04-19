@@ -201,10 +201,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# FastCharge
-PRODUCT_PACKAGES += \
-    FastCharge
-
 # Fingerprint
 TARGET_HAS_UDFPS := true
 $(call soong_config_set,xiaomi_hardware_biometrics,use_new_impl,true)

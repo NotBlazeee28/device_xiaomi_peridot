@@ -60,3 +60,6 @@ allow parts_app {
 get_prop(parts_app, settingslib_prop)
 
 allow parts_app hal_touchfeature_xiaomi_service:service_manager find;
+
+
+allow parts_app self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;

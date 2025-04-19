@@ -23,3 +23,5 @@ allow parts_app sysfs:file { read open };
 
 get_prop(parts_app, exported_system_prop)
 get_prop(parts_app, system_prop)
+
+allow parts_app vendor_sysfs_power_supply:file w_file_perms;
