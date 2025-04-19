@@ -191,6 +191,11 @@ TARGET_USERIMAGES_USE_F2FS := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Sensors
+SOONG_CONFIG_NAMESPACES += XIAOMI_SENSORS
+SOONG_CONFIG_XIAOMI_SENSORS += UDFPS_PATH
+SOONG_CONFIG_XIAOMI_SENSORS_UDFPS_PATH := /sys/class/touch/touch_dev/fod_press_status
+
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
