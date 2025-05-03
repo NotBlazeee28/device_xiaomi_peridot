@@ -354,7 +354,6 @@ SPAMMY_LOG_TAGS := \
     MiStcImpl \
     SDM \
     SRE \
-    android.hardware.power-service-qti \
     libsensor-boledalgo \
     libsensor-parseRGB \
     libsensor-qshcalapi \
@@ -449,11 +448,12 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
-
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
+    
 PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/power/config/pineapple/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    
 # QMI
 PRODUCT_PACKAGES += \
     libcurl.vendor \
@@ -498,6 +498,10 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/qcom-caf/common/libqti-perfd-client \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/xiaomi
 
 # Sensors
