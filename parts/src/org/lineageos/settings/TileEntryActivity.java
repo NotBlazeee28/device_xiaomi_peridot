@@ -28,7 +28,6 @@ import androidx.annotation.Nullable;
 
 import org.lineageos.settings.refreshrate.RefreshActivity;
 import org.lineageos.settings.touchsampling.TouchSamplingSettingsActivity;
-import org.lineageos.settings.thermal.ThermalSettingsActivity;
 import org.lineageos.settings.saturation.SaturationActivity;
 import org.lineageos.settings.gamebar.GameBarSettingsActivity;
 
@@ -36,7 +35,6 @@ public class TileEntryActivity extends Activity {
     private static final String TAG = "TileEntryActivity";
     private static final String REFRESH_TILE = "org.lineageos.settings.refreshrate.RefreshTileService";
     private static final String HTSR_TILE = "org.lineageos.settings.touchsampling.TouchSamplingTileService";
-    private static final String THERMAL_TILE = "org.lineageos.settings.thermal.ThermalTileService";
     private static final String SATURATION_TILE = "org.lineageos.settings.saturation.SaturationTileService";
     private static final String GAMEBAR_TILE = "org.lineageos.settings.gamebar.GameBarTileService";
 
@@ -57,8 +55,6 @@ public class TileEntryActivity extends Activity {
             intent = new Intent(this, RefreshActivity.class);
         } else if (HTSR_TILE.equals(sourceClassName)) {
             intent = new Intent(this, TouchSamplingSettingsActivity.class);
-        } else if (THERMAL_TILE.equals(sourceClassName)) {
-            intent = new Intent(this, ThermalSettingsActivity.class);
         } else if (SATURATION_TILE.equals(sourceClassName)) {
             intent = new Intent(this, SaturationActivity.class);
         } else if (GAMEBAR_TILE.equals(sourceClassName)) {
